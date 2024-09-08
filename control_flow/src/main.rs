@@ -1,24 +1,19 @@
 fn main() {
-    //If expressions
+    // If expressions
     let number = 3;
     if number < 5 {
         println!("True");
     } else {
-        println!("false");
+        println!("False");
     }
 
-    //using if in a let statement:
+    // Using if in a let statement:
     let condition = true;
     let number = if condition { 5 } else { 6 };
-    //this implies that if the condition is true the number will have value 5 and if false then will have value 6
-    print!("{}", number);
+    // This implies that if the condition is true, the number will have value 5; if false, then it will have value 6
+    println!("{}", number);
 
-    // fn main() {
-    //   loop {
-    //       println!("again!");
-    //}
-    //}
-    // main();
+    // Function that demonstrates loop with labels
     fn loooop() {
         let mut count = 0;
         'counting_up: loop {
@@ -30,25 +25,25 @@ fn main() {
                 if remaining == 9 {
                     break;
                 }
+                remaining -= 1;
+
                 if count == 2 {
                     break 'counting_up;
                 }
-                remaining -= 1;
-            }
 
-            count += 1;
+                count += 1;
+            }
+            println!("End count = {count}");
         }
-        println!("End count = {count}");
     }
     loooop();
 
-    //while loop-
+    // While loop demonstration
     fn while_loop() {
         let mut number = 3;
 
         while number != 0 {
             println!("{number}!");
-
             number -= 1;
         }
 
